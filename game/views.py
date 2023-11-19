@@ -2,16 +2,19 @@ from django.shortcuts import redirect, render
 
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from game.forms import RegisterForm
 
+@login_required
 def home(request):
     return render(request, 'home.html')
 
+@login_required
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def tutorial(request):
     return render(request, 'tutorial.html')
 
@@ -24,7 +27,7 @@ def register(request):
             user.set_password(user.password)
             user.save()
             request.session['message'] = "Registro bem-sucedido!"
-            return redirect('/')
+            return redirect('home')
     else:
         form = RegisterForm()
 
@@ -40,6 +43,6 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('home')
     return render(request, 'login.html')
 
