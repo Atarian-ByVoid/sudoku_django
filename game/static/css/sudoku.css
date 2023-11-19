@@ -1,7 +1,27 @@
-.sudoku-container {
+body {
+  margin: 0;
   text-align: center;
+  overflow: hidden;
+  position: relative; 
 }
 
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 5%;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.sudoku-container {
+  position: relative;
+  z-index: 1; 
+}
 .sudoku-board {
   display: grid;
   grid-template-columns: repeat(9, 50px);
@@ -48,3 +68,6 @@
 .cell:nth-child(n + 46):nth-child(-n + 54) {
   border-bottom: 5px solid blue;
 }
+
+
+
