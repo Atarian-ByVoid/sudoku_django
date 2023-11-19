@@ -1,9 +1,10 @@
+from audioop import reverse
 from django.shortcuts import redirect, render
 
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth import logout
 from game.forms import RegisterForm
 
 @login_required
@@ -54,3 +55,7 @@ def user_login(request):
             return redirect('home')
     return render(request, 'login.html')
 
+
+def user_logout_view(request):
+    logout(request)
+    return render(request,'login.html')
