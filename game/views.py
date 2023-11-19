@@ -22,6 +22,10 @@ def game(request):
 def tutorial(request):
     return render(request, 'tutorial.html')
 
+@login_required
+def profile(request):
+    return render(request, 'profile.html')
+
 
 def register(request):
     if request.POST:
@@ -31,7 +35,7 @@ def register(request):
             user.set_password(user.password)
             user.save()
             request.session['message'] = "Registro bem-sucedido!"
-            return redirect('home')
+            return redirect('/')
     else:
         form = RegisterForm()
 
