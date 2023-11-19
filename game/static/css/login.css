@@ -1,9 +1,10 @@
 body {
-  background-image: url('../images/flor.jpg');
-    background-size: cover;
+  background-image: url('../images/montanha.jpg');
+  background-size: cover;
     background-position: center;
   }
-  
+ 
+    
   .container-form-login {
     width: max-content;
     margin: 0 auto;
@@ -27,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform .5s ease, height .2 ease;
+
   
   
   }
@@ -149,6 +150,7 @@ body {
     font-size: 1em;
     color: white;
     font-weight: 500;
+
   }
   
   .login-register {
