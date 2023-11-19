@@ -1,7 +1,9 @@
 body {
   background-image: url('../images/montanha.jpg');
   background-size: cover;
-    background-position: center;
+  background-position: center;
+  min-height: 100vh;
+
   }
  
     
