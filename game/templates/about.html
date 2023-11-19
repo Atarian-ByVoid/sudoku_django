@@ -1,13 +1,49 @@
+{% include 'exports/header.html' %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Game</title>
+    <title>História do Sudoku</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
 </head>
-<body>
-    <h2>ABOUT </h2>
 
-    
+<body>
+
+    <header>
+        <h1>História do Sudoku</h1>
+        <p>Descubra como esse fascinante quebra-cabeça se tornou um fenômeno mundial.</p>
+    </header>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Origens do Sudoku</h2>
+            <p>O Sudoku, um quebra-cabeça de lógica numérica, tem suas raízes no Japão. Seu precursor, conhecido como
+                "Number Place", foi publicado pela primeira vez na revista americana "Dell Pencil Puzzles and Word
+                Games" em 1979. No entanto, o Sudoku como o conhecemos hoje foi popularizado no Japão na década de 1980
+                pela revista "Nikoli".</p>
+        </div>
+
+        <div class="card">
+            <h2>Popularização Global</h2>
+            <p>A partir do final dos anos 90, o Sudoku começou a ganhar popularidade em todo o mundo. Jornais, revistas
+                e sites especializados começaram a apresentar o jogo, atraindo uma ampla audiência. Sua simplicidade,
+                combinada com a necessidade de raciocínio lógico, fez com que se tornasse um fenômeno global.</p>
+        </div>
+
+        <div class="card">
+            <h2>Regras do Jogo</h2>
+            <p>O Sudoku é jogado em uma grade 9x9, dividida em nove subgrades 3x3. O objetivo é preencher cada célula da
+                grade com um número de 1 a 9, garantindo que cada linha, coluna e subgrade contenha todos os números de
+                1 a 9, sem repetições.</p>
+        </div>
+    </div>
+
+
+
 </body>
+{% include 'exports/footer.html' %}
+
 </html>

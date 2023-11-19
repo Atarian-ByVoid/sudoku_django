@@ -5,8 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
 </head>
 <body>
-    
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/about">About Game</a>
+            <a href="/game">Game</a>
+            <div class="dropdown">
+              <a href="#"><i class="fas fa-bars" style="color: white;"></i> Menu</a>
+              <div class="dropdown-content">
+                <a href="/logout"><i class="fas fa-sign-out-alt" style="color: white;"></i> Logout</a>
+                <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;margin-right: 5px;"></i>My Profile</a>
+                <a href="#"><i class="fa-solid fa-splotch fa-bounce" style="color: #ffff00;margin-right: 5px;"></i>Special</a>
+              </div>
+            </div>
+        </nav>
+      <script src="https://kit.fontawesome.com/b316447b19.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
