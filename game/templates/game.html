@@ -1,0 +1,21 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/sudoku.css' %}">
+</head>
+
+<body>
+  <div class="sudoku-container">
+    <div id="sudoku-board" class="sudoku-board">
+    </div>
+    <button id="check-button">Check</button>
+    <button id="reset-button">Reset</button>
+  </div>
+  <script src="{% static 'js/sudoku.js' %}" defer></script>
+</body>
+
+</html>

@@ -15,6 +15,10 @@ def about(request):
     return render(request, 'about.html')
 
 @login_required
+def game(request):
+    return render(request, 'game.html')
+
+@login_required
 def tutorial(request):
     return render(request, 'tutorial.html')
 

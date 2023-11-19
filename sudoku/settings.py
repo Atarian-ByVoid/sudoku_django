@@ -1,4 +1,5 @@
 
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,7 +15,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'game/static')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
